@@ -29,7 +29,9 @@ historyItem.innerHTML =`
  <p class="text-xs text-gray-500">Balance: $${balance.toFixed(2)}</p>
 `;
 const historyContainer =document.getElementById('history-list');
-historyContainer.insertBefore(historyItem, historyContainer.firstChild)
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+document.getElementById('history-section').classList.remove('hidden');
+
 })
 
 // add event listener saving button
@@ -70,7 +72,7 @@ historyTab.addEventListener('click', function(){
     assistantTab.classList.add('text-gray-600');
 
     document.getElementById('expense-form').classList.add('hidden');
-    document.getElementById('history-section').classList.remove('hidden');
+   
 
     // assistant button to history button
     assistantTab.addEventListener('click', function(){
